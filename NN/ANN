@@ -1,3 +1,0 @@
-Run the Python Notebook `grid_search_na_nb_wandb.ipynb` for Grid Search. 
-
-256 runs, one for each (na, nb) pair. From 0 to 15 each value.
