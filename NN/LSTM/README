@@ -1,0 +1,10 @@
+Run the `python preprocessing.py` script to create some .npy files that will be used for the training
+
+Run `wandb sweep sweep.yaml` to create the wandb dependencies
+
+Run `wandb agent skapetis-tu-e/uncategorized/oelavair` organization/Project/Sweep_ID 
+
+Run the Python Notebook 'continue_train.ipynb' to continue training the best model. Change the name of the model.
+
+Run the Python Notebook 'lstm_inference.ipynb' to evaluate the best model from the grid search and the subsequent fine-tuned one. 
+
