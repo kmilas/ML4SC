@@ -1,0 +1,25 @@
+program: train.py
+method: grid
+project: 5SC28-NN-gridsearch-v2
+name: nn_grid_sweep
+metric:
+  name: rmse
+  goal: minimize
+
+parameters:
+  na:
+    values: [5, 8, 11]
+  nb:
+    values: [3, 5, 8, 11]
+  hidden_layers:
+    values: [1, 2]
+  hidden_neurons:
+    values: [32, 64, 128]
+  activation:
+    values: ['tanh', 'leaky_relu']
+  learning_rate:
+    value: 0.001
+  epochs:
+    value: 500
+  batch_size:
+    value: 256
