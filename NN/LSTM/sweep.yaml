@@ -1,22 +1,27 @@
-method: grid  # or "random" for random search
+method: grid
+project: 5SC28-LSTM-gridsearch-v2
 name: lstm-grid-search
 metric:
-  name: val_NRMS
+  name: rmse
   goal: minimize
 
 parameters:
   hidden_size:
     values: [16, 32, 64]
   learning_rate:
-    values: [0.001, 0.01, 0.1]
+    values: [0.01]
   num_layers:
     values: [1, 2]
   batch_size:
     values: [128, 64]
   sequence_length:
-    values: [10]     # or [20, 30] to sweep over it
+    values: [5, 10, 15]
   epochs:
-    value: 200       # fixed number
+    value: 200
+  bidirectional:
+    values: [false, true]
+  dropout:
+    values: [0.0, 0.2, 0.5]
 
 
 program: train.py
